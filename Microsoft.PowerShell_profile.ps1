@@ -21,5 +21,8 @@ function Prompt {
 }
 Clear-Host
 
+function Invoke-EZA { eza --icons=always }
+Set-Alias -Name ls -Value Invoke-EZA
+
 # Keep this at the end of your profile, otherwise it won't work
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
